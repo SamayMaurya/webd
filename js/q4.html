@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Modifying Web Page</title>
+<style>
+  /* Add your CSS styles here if needed */
+</style>
+</head>
+<body>
+<div id="content">
+  <h1>Welcome to the Self-Modifying Web Page!</h1>
+  <p>This page will modify itself after every one minute.</p>
+</div>
+
+<script>
+  // Function to modify the content of the page
+  function modifyPage() {
+    var contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = `
+      <h1>Samay Maurya</h1>
+      <p>This content is updated dynamically.</p>
+      <p>Current time: ${new Date().toLocaleTimeString()}</p>
+    `;
+  }
+
+  // Call the modifyPage function initially
+  modifyPage();
+
+  // Call the modifyPage function every one minute
+  setInterval(modifyPage, 6000); // 60000 milliseconds = 1 minute
+</script>
+</body>
+</html>

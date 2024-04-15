@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition Effect Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .transition-box {
+  width: 200px;
+  height: 100px;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out; /* Defines the transition effect */
+}
+
+.transition-box:hover {
+  background-color: #333; /* New background color on hover */
+  color: #fff; /* New text color on hover */
+}
+
+</style>
+<body>
+  <h1>Hover over the box to see the transition!</h1>
+  <div class="transition-box">This is a box with a transition effect.</div>
+</body>
+</html>

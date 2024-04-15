@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>QUESTION 1</title>
+<body>
+<style>
+
+
+.form{
+align: center;
+justify content : center;
+border : 0.5rem solid black;
+width : 500px;
+height :200px;
+margin: 200px
+
+}
+</style>
+<center>
+<form class="form">
+
+<br><br>
+<select name="dropdown" size= "1" id="creditcard">
+<option id ="master" selected >Master card</option>
+<option id ="visa" selected >Visa</option>
+<option id ="amex" selected >AMEX</option>
+</select>
+
+<br><br><br>
+<label>Enter number of Card Number</label>
+<input type="text" id="num" size="50">
+
+<br>
+<br>
+<button type= "button" onclick= "fucn()">Submit</button>
+</form>
+
+</center>
+
+
+<script>
+
+function mcheck(numtype){
+	if(numtype.length!=16)alert("Wrong Cardnumber");
+	const lenn = parseInt(numtype);
+	const pref = lenn%100;
+	if(pref ==51|| pref ==55) alert("Validated");
+	else alert("Wrong Cardnumber ");
+}
+
+function vcheck(numtype){
+	if(numtype.length!=13|| numtype.length!=16 )alert("Wrong Cardnumber");
+	const lenn = parseInt(numtype);
+	const pref = lenn%10;
+	if(pref ==4) alert("Validated");
+	else alert("Wrong Cardnumber ");
+}
+
+function acheck(numtype){
+	if(numtype.length!=15)alert("Wrong Cardnumber");
+	const lenn = parseInt(numtype);
+	const pref = lenn%100;
+	if(pref ==34|| pref ==37) alert("Validated");
+	else alert("Wrong Cardnumber ");
+}
+
+function fucn(){
+	const cardtype = document.getElementById("creditcard").value;
+	const numtype = document.getElementById("num").value;
+        console.log(cardtype + " " + numtype);
+	if(cardtype == "Master Card"){
+	mcheck(numtype);
+	}
+	else if (cardtype == "Visa") vcheck(numtype);
+	else acheck(numtype);
+
+
+
+
+}
+
+</script>
+</body>
+</head>
+</html>
