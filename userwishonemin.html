@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>modificantion count </title>
+</head>
+<body>
+<h1 id="res">Modification count:0</h1>
+<script>
+var ans= document.getElementById('res');
+var count =0;
+function mod(){
+count++;
+ans.innerText="Modification count:"+ count;
+}
+setInterval(mod,100);
+</script>
+</body>
+<html>

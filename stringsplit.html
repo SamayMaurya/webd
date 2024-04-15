@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>phone number split</title>
+<body>
+<label for ="telephone">Enter telephone number:</label>
+<input type="text" id="tnum">
+<button onclick="getnum()">Click</button>
+<h4 id="area"></h4>
+<h4 id="token"></h4>
+<script>
+
+function getnum(){
+const tnum= document.getElementById('tnum').value.toString();
+const area= document.getElementById('area');
+const token = document.getElementById('token');
+
+area.innerText = "area.code: "+tnum.split(")")[0].split("(")[1];
+token.innerText= "token: "+tnum.split("-")[1];
+
+
+}
+</script>
+
+</body>
+</head>
+</html>

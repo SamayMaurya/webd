@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+	<title>Country Names</title>
+<body>
+	<label>Select a county</label>
+	<select id="country">
+	<option value="">-- select country --</option>
+
+	<option value="USA">USA</option>
+	<option value="india">India</option>	
+	</select>
+
+	<label>Select a Capital</label>
+	<select id="Capital">
+		<option value="">-- select capital --</option>
+
+	<option value="Washinton">Washinton</option>
+	<option value="delhi">delhi</option>	
+	</select>
+	<button onclick="myfu()">check</button>
+	<h4 id="ans"></h4>
+
+<script>
+
+const corr= {
+		"USA":"Washinton" , 
+		"India":"delhi"
+}
+
+function myfu(){
+	const country= document.getElementById("country").value;
+	const capital= document.getElementById("Capital").value;
+	var ans= document.getElementById("ans");
+
+	if(corr[country]==capital){
+	ans.innerText="correct";
+
+	}
+	else{
+	ans.innerText="Wrong";
+	}
+
+}
+
+
+</script>
+
+
+</body>
+</html>

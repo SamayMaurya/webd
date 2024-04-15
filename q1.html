@@ -1,0 +1,94 @@
+<html>
+<head>
+
+<title>HELLO JS</title>
+<link rel="stylesheet" href="a.css">
+<body>
+<div id="mainbox">
+<center>
+<h1 id="heading">Crdit card validator</h1>
+
+<form id="cardform">
+<br><br>
+<select name="dropdown" size="1" id="selectcard">
+<option id ="Mastercard" selected>Mastercard</option>
+<option id="Amex" selected>Amex</option>
+<option id="Visa" selected>Visa</option>
+</select>
+<br>
+<br>
+
+<label>Enter number of Card Number</label>
+
+<input type="text" id="cardnumber" size ="50">
+<br><br>
+<br>
+<button type="button" id="cardvalidator" onclick="func()">Validator</button>
+</center>
+
+
+<script>
+
+function mcheck(numtype){
+if(numtype.length!=16) alert("Wrong Cardnumber");
+
+const lenn= parsInt(numtype);
+const pref= lenn%100;
+if(pref==51|| pref==55) alert("Validate");
+else alert("Not Validate");
+
+}
+
+function acheck(numtype){
+if(numtype.length!=13 || numtype.length!=16) alert("Wrong Number");
+const lenn =parsInt(numtype);
+const pref= lenn%10;
+if(pref==4) alert("Validate");
+else alert("Not Validate");
+}
+
+
+function vcheck(numtype){
+if(numtype.length!=15) alert("Wrong Number");
+const lenn =parsInt(numtype);
+const pref= lenn%10;
+if(pref==34) alert("Validate");
+else if(pref==37) alert("Validate");
+else alert("Not Validate");
+}
+
+
+
+
+
+function func(){
+
+const cardtype =document.getElementById("selectcard").value;
+
+const numtype=document.getElementById("cardnumber").value;
+
+console.log(cardtype + " " + numtype);
+if(cardtype=="Mastercard")
+{
+mcheck(numtype);
+}
+else if(cardtype=="Visa"){
+vcheck(numtype);
+}
+else
+acheck(numtype);
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</head>
+
+</html>
+

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>modificantion count </title>
+</head>
+<body>
+<center>
+<form border= "1">
+<label>Enter DOB</label>
+<input type="text" id="date">
+<br><br>
+<button type="button" onclick="myfunc()">Sumit</button>
+</form>
+
+<p id="output"></p>
+
+</center>
+<script>
+const arr=["Sunday","Monday","Tue","Wed","Thurs","Friday","Satuday"];
+
+function myfunc(){
+const b=document.getElementById("date").value;
+const d=new Date(b);
+const p= document.getElementById("output");
+const a=d.getDay();
+if(d){
+p.textContent= `Day at ${b} is ${arr[a]}`;
+}
+else{
+p.textContent="Please select date";
+
+}
+
+
+
+}
+
+
+</script>
+</body>
+</html>

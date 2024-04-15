@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>image invert</title>
+
+<body>
+<img id="myimage" style= "width=500px; height = 500px;" src="car.jpg" alt="nissan silvia s15" >
+
+<script>
+
+const image = document.getElementById('myimage');
+function flip(){
+image.style.filter = 'invert(1)';
+
+}
+
+function notflip(){
+image.style.filter = 'none';
+
+}
+
+
+image.addEventListener('mouseover',flip);
+image.addEventListener('mouseout',notflip);
+
+
+
+</script>
+
+</body>
+
+
+
+</head>
+
+</html>

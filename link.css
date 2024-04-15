@@ -1,0 +1,25 @@
+a:link{
+color: green;
+background color:trasparent;
+text-decoration:none
+
+}
+
+a:visited{
+color:pink;
+background-color:trasparent;
+
+}
+
+a:hover{
+color:red;
+background-color:trasparent;
+
+}
+
+a:active{
+color:yellow;
+background-color:trasparent;
+
+
+}

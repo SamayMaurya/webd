@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+	<label > Name:<input text="text" id="name" ></label>
+	<label> password:<input text="password" id="password"></label>
+	<label> Email:<input text="email" id="email"></label>
+	<button type="submit" onclick="formvalidation()">submit</button>
+	<!-- <h1 id="area"></h1>
+	<h1 id="token"></h1> -->
+	<script>
+		function emailvalidate(mail){
+			const apos=mail.indexOf("@");
+			const dotpos=mail.indexOf(".");
+			if(apos<1 || (dotpos-apos<2))
+			{
+				alert("enter correct email");
+				return false;
+			}
+			return true;
+			
+		}
+		function namevalidate(name){
+			if(name.length<6){
+				alert("length should be greater equal 6");
+				return false;
+			}
+			for(let i=0;i<name.length;i++){
+				const char=name[i];
+				if((char < 'A' || char >'Z')&&(char<'a' ||char>'z')){
+					alert("name should only have alphabets");
+					return false;
+				}
+			}
+			return true;
+		}
+		function formvalidation(){
+			const name=document.getElementById("name").value;
+			const mail=document.getElementById("email").value;
+			const echeck=emailvalidate(mail);		
+			const ncheck=namevalidate(name);
+		}
+	</script>
+</body>
+</html>

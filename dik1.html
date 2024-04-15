@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<title>Resizable Background Image</title>
+
+<style>
+body{
+        margin: 0;
+        padding: 0;
+	background-image: url('car.jpg');
+        background-size: cover;
+	display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+.content{
+padding : 20px;
+color:black;
+text-align:center;
+
+}
+
+</style>
+
+<body>
+<div class="content">
+<h1>Resize the backgorun image </h1>
+<label for="car">Choose the background</label>
+
+
+<select id="car">
+<option value="auto">auto</option>
+<option value="cover">cover</option>
+<option value="contain">Contain</option>
+</select>
+</div>
+
+    <script>
+        document.getElementById('car').addEventListener('change', function() {
+            var selectedSize = this.value;
+            document.body.style.backgroundSize = selectedSize;
+        });
+    </script>
+
+</body>
+</html>
